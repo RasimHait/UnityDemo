@@ -1,0 +1,16 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 4d70b18997273da4ea8e808d28a26f01, type: 3}
+  m_Name: Level_1
+  m_EditorClassIdentifier: Project::Project.LevelSettings
+  <FieldViewPrefab>k__BackingField: {fileID: 614839971999201530, guid: 80a25efee9bd56343aba130a2f8d8611, type: 3}
+  <CubeViewPrefab>k__BackingField: {fileID: 1979657331950117386, guid: d9ea46c0dffd606439a2c9d0fd40cca7, type: 3}

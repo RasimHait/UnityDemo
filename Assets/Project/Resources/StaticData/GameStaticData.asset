@@ -1,0 +1,71 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 79f2818c6b96d7749a7e2f51792235f2, type: 3}
+  m_Name: GameStaticData
+  m_EditorClassIdentifier: Project::Project.CollectionSettings
+  <RunFromInitialScene>k__BackingField: 1
+  <InitialSceneIndex>k__BackingField: 0
+  <MainSceneIndex>k__BackingField: 1
+  <DragDeadZone>k__BackingField: 0.05
+  <DragSensitivity>k__BackingField: 50
+  <DragSmoothTime>k__BackingField: 0.05
+  <LoopFromLevelIndex>k__BackingField: 0
+  <Levels>k__BackingField:
+  - {fileID: 11400000, guid: d0b8da0e5cfb74c4d9369e358e7a5bee, type: 2}
+  <GameHUDPrefab>k__BackingField: {fileID: 8896030818321223342, guid: abfd0010a11286548ab078693cdf56e0, type: 3}
+  <MergeVFXPrefab>k__BackingField: {fileID: 2381770028993986468, guid: ceb5cd210809f0547aad6fab500adc3c, type: 3}
+  <CubeTextures>k__BackingField:
+    _serializedList:
+    - Key: 2
+      Value:
+        Texture: {fileID: 2800000, guid: 56520335884c2ed45a0933a7cc67c584, type: 3}
+        Color: {r: 0.23139909, g: 0.754717, b: 0.242079, a: 1}
+    - Key: 4
+      Value:
+        Texture: {fileID: 2800000, guid: e6f0b251fbdf39f4491fd89c68c84df9, type: 3}
+        Color: {r: 0.8867924, g: 0.42487907, b: 0.054378804, a: 1}
+    - Key: 8
+      Value:
+        Texture: {fileID: 2800000, guid: 5c6e0447f108aaa4cbe4bb9bc5a2dcd5, type: 3}
+        Color: {r: 0.22877358, g: 0.83317107, b: 0.9150943, a: 1}
+    - Key: 16
+      Value:
+        Texture: {fileID: 2800000, guid: 636a3f254c79d644e865e8903f155268, type: 3}
+        Color: {r: 0.9056604, g: 0.12388753, b: 0.5474913, a: 1}
+    - Key: 32
+      Value:
+        Texture: {fileID: 2800000, guid: c999fe88ccfc4704f971871c4f18d436, type: 3}
+        Color: {r: 0.5430256, g: 0.42114633, b: 0.9811321, a: 1}
+    - Key: 64
+      Value:
+        Texture: {fileID: 2800000, guid: ac2f769c18724f74fad22635a49ba9c7, type: 3}
+        Color: {r: 0.9150943, g: 0.25485674, b: 0.16834284, a: 1}
+    - Key: 128
+      Value:
+        Texture: {fileID: 2800000, guid: 16611d6ee13f4294b9cfb83dcbef95cf, type: 3}
+        Color: {r: 0.9245283, g: 0.89087415, b: 0.23985407, a: 0.99215686}
+    - Key: 256
+      Value:
+        Texture: {fileID: 2800000, guid: ee8086355f397244e992d648a74cfbff, type: 3}
+        Color: {r: 0.1787558, g: 0.9716981, b: 0.5756035, a: 1}
+    - Key: 512
+      Value:
+        Texture: {fileID: 2800000, guid: f0673599b27515c47bae8cd6db97789b, type: 3}
+        Color: {r: 0.25098038, g: 0.30372155, b: 1, a: 1}
+    - Key: 1024
+      Value:
+        Texture: {fileID: 2800000, guid: 509bb6816dc4687409e202c7ea730cde, type: 3}
+        Color: {r: 0.9346767, g: 0, b: 0.9433962, a: 1}
+    - Key: 2048
+      Value:
+        Texture: {fileID: 2800000, guid: 80d6e774cfb24bd4aaf840644edd7a4a, type: 3}
+        Color: {r: 0.16371912, g: 1, b: 0, a: 1}
