@@ -15,6 +15,7 @@ namespace Project.Machines
         protected override void Enter()
         {
             Debug.Log("Project: UI Machine entered Lobby State");
+
             _uiService.HUD.GameLobbyScreen.Show();
 
             _eventService.ObserveEvent<EventData.UI.TapOnButton>()

@@ -52,6 +52,11 @@ namespace Core.Processors
             taskFactory(source.Token).SuppressCancellationThrow().Forget(UnityEngine.Debug.LogException);
             return source;
         }
-
+       
+        public new void Dispose()
+        {
+            _mainCTS?.Cancel();
+            base.Dispose();
+        }
     }
 }

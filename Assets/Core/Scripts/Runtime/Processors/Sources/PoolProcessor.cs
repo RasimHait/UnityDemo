@@ -1,5 +1,6 @@
 ﻿using System;
 using System.Collections.Generic;
+using UniRx;
 using UnityEditor;
 using UnityEngine;
 using Zenject;
@@ -91,6 +92,25 @@ namespace Core.Processors
             }
 
             return obj;
+        }
+
+        public void PushBackAll(string poolName)
+        {
+            var backList = new List<IPoolableObject>();
+
+            foreach (var pair in _out)
+            {
+                if(pair.Value ==  poolName)
+                {
+                    backList.Add(pair.Key);
+                  
+                }
+            }
+
+            foreach (var item in backList)
+            {
+                PushBack(item);
+            }
         }
 
         public void ClearPool(string poolName)

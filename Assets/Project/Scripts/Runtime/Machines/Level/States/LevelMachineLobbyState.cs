@@ -29,8 +29,20 @@ namespace Project.Machines
                .AddTo(LifeTime);
         }
 
+        private void CleanUp()
+        {
+            Data.Score = 0;
+
+            if (Data.FieldObject)
+            {
+                Object.Destroy(Data.FieldObject.gameObject);
+            }
+        }
+
         private void PrepareLevel()
         {
+            CleanUp();
+
             var settings = _levelService.CurrentLevelData;
             Data.FieldObject = Object.Instantiate(settings.FieldViewPrefab);
         }

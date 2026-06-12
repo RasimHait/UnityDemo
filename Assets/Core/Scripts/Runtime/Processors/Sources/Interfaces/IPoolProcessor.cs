@@ -9,5 +9,6 @@ namespace Core.Processors
         T Pop<T>(string poolName, Transform parent) where T : IPoolableObject;
         void Push<T>(string poolName, T reference) where T : IPoolableObject;
         void PushBack<T>(T obj) where T : IPoolableObject;
+        void PushBackAll(string poolName);
     }
 }

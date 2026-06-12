@@ -12,6 +12,7 @@ namespace Project.Machines
     public class LevelMachineActiveState : BaseState<LevelDynamicData>
     {
         [Inject] private readonly InputService _inputService;
+        [Inject] private readonly LevelService _levelService;
         [Inject] private readonly PoolService _poolService;
         [Inject] private readonly EventService _eventService;
         private CubeView _currentCube;
@@ -21,6 +22,11 @@ namespace Project.Machines
             Debug.Log("Project: Level Machine entered Active(Game) State");
             Subscribe();
             LoadCube();
+        }
+
+        protected override void Exit()
+        {
+            _poolService.PushBackAll("Cubes");
         }
 
         private void Subscribe()
@@ -33,7 +39,6 @@ namespace Project.Machines
                 .Where(_ => _currentCube != null)
                 .Subscribe(x => LifeTime.RunBindedNoWait(LaunchCube))
                 .AddTo(LifeTime);
-
 
             _eventService.ObserveEvent<EventData.Cube.Contact>()
                 .Subscribe(OnCubeContact)
@@ -73,6 +78,24 @@ namespace Project.Machines
             LifeTime.RunBindedNoWait(() => ShowMergeVFX(data.ContantPoint));
 
             await data.Target.Upgrade();
+
+            var newValue = data.Target.Value;
+
+            if (Data.Score <  newValue)
+            {
+                Data.Score = newValue;
+                _eventService.TriggerEvent(new EventData.Level.ScoreUpdated(Data.Score));
+                TryComplete();
+            }
+        }
+
+
+        private void TryComplete()
+        {
+            if (Data.Score >= _levelService.CurrentLevelData.ScoreToWin)
+            {
+                Machine.SetState<LevelMachineVictoryState>();
+            }
         }
 
         private async UniTask ShowMergeVFX(Vector3 point)

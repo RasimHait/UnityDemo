@@ -7,5 +7,6 @@ namespace Project.Data
     public class LevelDynamicData : BaseData<LevelDynamicData>
     {
         public GameFieldView FieldObject;
+        public int Score;
     }
 }

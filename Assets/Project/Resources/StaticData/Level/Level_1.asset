@@ -14,3 +14,4 @@ MonoBehaviour:
   m_EditorClassIdentifier: Project::Project.LevelSettings
   <FieldViewPrefab>k__BackingField: {fileID: 614839971999201530, guid: 80a25efee9bd56343aba130a2f8d8611, type: 3}
   <CubeViewPrefab>k__BackingField: {fileID: 1979657331950117386, guid: d9ea46c0dffd606439a2c9d0fd40cca7, type: 3}
+  <ScoreToWin>k__BackingField: 2048

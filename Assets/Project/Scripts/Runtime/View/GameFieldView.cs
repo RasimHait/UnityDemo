@@ -18,6 +18,7 @@ namespace Project.View
         {
             cube.transform.SetParent(_launchOrigin);
             cube.transform.localPosition = Vector3.zero;
+            cube.transform.localRotation = Quaternion.identity;
         }
     }
 }

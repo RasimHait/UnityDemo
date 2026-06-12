@@ -36,6 +36,11 @@ namespace Project.Services
             _processor.PushBack(obj);
         }
 
+        public void PushBackAll(string poolName)
+        {
+            _processor.PushBackAll(poolName);
+        }
+
         public void ClearPool(string poolName)
         {
             _processor.ClearPool(poolName);

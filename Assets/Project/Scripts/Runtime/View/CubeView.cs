@@ -2,7 +2,6 @@
 using Cysharp.Threading.Tasks;
 using Project.Data;
 using Project.Services;
-using Unity.VisualScripting.YamlDotNet.Core.Tokens;
 using UnityEngine;
 using Zenject;
 
@@ -41,7 +40,7 @@ namespace Project.View
 
         public void OnReturnToPool()
         {
-            _rigidbody.isKinematic = false;
+            _rigidbody.isKinematic = true;
             _rigidbody.linearVelocity = Vector3.zero;
             _rigidbody.angularVelocity = Vector3.zero;
             Value = 2;
@@ -63,6 +62,7 @@ namespace Project.View
         {
             Value *= 2;
             UpdateView();
+
             await UniTask.CompletedTask;
         }
 

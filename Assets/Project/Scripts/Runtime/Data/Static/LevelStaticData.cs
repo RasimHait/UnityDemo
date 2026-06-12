@@ -8,5 +8,6 @@ namespace Project.Data
     {
         [field: SerializeField] public GameFieldView FieldViewPrefab { get; private set; }
         [field: SerializeField] public CubeView CubeViewPrefab { get; private set; }
+        [field: SerializeField] public int ScoreToWin { get; private set; } = 2048;
     }
 }

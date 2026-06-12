@@ -26,5 +26,13 @@ namespace Project.Data
             public record Contact(CubeView Initiator, CubeView Target, Vector3 ContantPoint);
         }
         #endregion
+
+        #region Level
+        public class Level
+        {
+            public record ScoreUpdated(int Score);
+            public record Completed(bool IsVictory);
+        }
+        #endregion
     }
 }
